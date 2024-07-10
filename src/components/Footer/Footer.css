@@ -1,0 +1,93 @@
+.footer {
+    background-color: #bdd191;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .boxblack {
+    width: 100%;
+    background-color: #8e8e3c;
+    margin: 4rem auto;
+    padding: 2rem;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .container {
+    width: 100%;
+  }
+  
+  .call-to-action {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .call-to-action p {
+    margin: 0.5rem 0;
+  }
+  
+  .call-to-action p:first-child {
+    font-size: 24px;
+    color: #f5f5f5;
+  }
+  
+  .call-to-action p:last-child {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .call-to-action a {
+    display: inline-block;
+    background-color: #0b0f10;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .call-to-action a:hover {
+    background-color: #00487a;
+  }
+  
+  .right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .right .nested-right {
+    margin-right: 2rem; /* Adjust margin as needed */
+  }
+  
+  .right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1 1 200px;
+    min-width: 150px;
+  }
+  
+  .right ul li {
+    margin-bottom: 10px;
+  }
+  
+  .right ul li a {
+    text-decoration: none;
+    color: #b3cd8d;
+  }
+  
+  .right ul li a:hover {
+    text-decoration: underline;
+  }
+  
