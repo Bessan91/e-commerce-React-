@@ -1,6 +1,9 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../ForgetPass/ForgetPass.css';
+import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 
 export default function ForgetPass() {
   const [email, setEmail] = useState('');
@@ -14,25 +17,25 @@ export default function ForgetPass() {
     e.preventDefault();
     try {
       const response = await axios.patch(`${import.meta.env.VITE_API}/auth/sendcode`, { email });
-
-      // Handle the response as needed, e.g., show a success message
       console.log("Email sent successfully:", response.data);
-      
-      // Navigate to another page if needed
-      navigate('/Sendcode');
+      navigate('/sendcode'); 
     } catch (error) {
-      // Handle the error as needed, e.g., show an error message
       console.error("Error sending email:", error);
     }
   };
 
   return (
-    <div className='container d-flex justify-content-center mt-5'>
-      <form onSubmit={handleSubmit}>
+    <>
+    <Navbar/>
+    <div className='content d-flex flex-column flex-md-row align-items-center justify-content-center '>
+      <img className="img-fluid mb-4 mb-md-0" src="src/assets/Emails.gif" alt="Reset password illustration" />
+      <form className="enterEmail " onSubmit={handleSubmit}>
         <h3>Enter Email</h3>
-        <input type="text" name="UserEmail" value={email} onChange={handleChange} />
-        <button type="submit">Submit</button>
+        <input type="text" name="UserEmail" value={email} onChange={handleChange} className="form-control " />
+        <button type="submit" className="btn btn-primary mt-2">Submit</button>
       </form>
     </div>
+    <Footer/>
+    </>
   );
 }

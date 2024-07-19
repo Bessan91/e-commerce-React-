@@ -147,9 +147,12 @@ export default function SignUp() {
   return (
     <>
       <Navbar/>
-      <div className='container mt-4 justify-content-center'>
+      <div className='container mt-4'>
         <div className='row justify-content-center p-4 mt-3'>
-          <div className='col-md-6 p-4 mt-3 '>
+          <div className='col-md-6 p-4 mt-3 d-flex align-items-center'>
+            <img className="img-fluid" src="src/assets/Sign up.gif" alt="Sign up" />
+          </div>
+          <div className='col-md-6 p-4 mt-3'>
             <h2 className='title text-center mt-3'>Sign Up</h2>
             <form onSubmit={handleSubmit}>
               <div className='form-group'>
@@ -168,7 +171,7 @@ export default function SignUp() {
                 <label htmlFor='image'>Image</label>
                 <input type="file" className='form-control-file m-3' id='image' name='image' onChange={handleImageChange} />
               </div>
-              <button type="submit" disabled={loader} className='btn btn-primary btn-block m-4 '>
+              <button type="submit" disabled={loader} className='btn btn-primary btn-block m-4'>
                 {!loader ? 'Register' : 'Wait to Sign Up'}
               </button>
             </form>

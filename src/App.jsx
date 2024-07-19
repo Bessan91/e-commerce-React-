@@ -15,6 +15,7 @@ import ProtectedRoutes from './components/ProtectedRoutes/ProtectedRoutes';
 import { UserContextProvider } from './Context/User.jsx'; // Updated import
 import CatogriesProduct from './components/CatogriesProduct/CatogriesProduct.jsx'
 import ForgetPass from './components/ForgetPass/ForgetPass.jsx';
+import Sendcode from './components/Sendcode/Sendcode.jsx';
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
   ,{
     path: "/ForgetPass",
     element: <ForgetPass/>
+  }
+  ,{
+    path :"/Sendcode",
+     element:<Sendcode /> 
   }
 
 ]);

@@ -1,0 +1,20 @@
+@media (max-width: 767px) {
+    .content {
+      flex-direction: column;
+    }
+  
+    .content img {
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .content {
+      flex-direction: row;
+    }
+  
+    .content .enterEmail {
+      margin-left: 20px;
+    }
+  }
+  
